@@ -1,0 +1,6 @@
+{
+  "name": "DeadlineZero",
+  "description": "An AI-powered productivity engine that breaks down tasks, prioritizes schedules, detects workload overload, and drafts follow-ups to keep you on top of deadlines.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper to check if user is authenticated
+    function isAuth() {
+      return request.auth != null;
+    }
+
+    // Helper to check if user is accessing their own data
+    function isOwner(userId) {
+      return isAuth() && request.auth.uid == userId;
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+
+    // Tasks collection
+    match /tasks/{taskId} {
+      allow read, write: if isAuth() && (resource == null || resource.data.userId == request.auth.uid) && (request.resource == null || request.resource.data.userId == request.auth.uid);
+    }
+
+    // Daily Plans
+    match /dailyPlans/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+
+    // Overload Status
+    match /overloadStatus/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+
+    // Chats
+    match /chats/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+  }
+}
