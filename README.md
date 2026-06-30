@@ -1,20 +1,33 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# DeadlineZero
 
-# Run and deploy your AI Studio app
+An AI-powered deadline management companion that helps students and 
+professionals track, prioritize, and never miss their academic, project, 
+or work deadlines.
 
-This contains everything you need to run your app locally.
+## Problem
+Deadlines pile up across different platforms — assignments, project 
+milestones, internship tasks — and manually tracking them leads to missed 
+due dates and last-minute scrambling.
 
-View your app in AI Studio: https://ai.studio/apps/e4d946eb-0652-4479-9151-0f13b44b7b7f
+## Solution
+DeadlineZero uses generative AI to help users capture and organize 
+deadlines naturally, then keeps everything synced with Google Calendar 
+so there's one reliable place to see what's due and when.
 
-## Run Locally
+## Features
+- AI-assisted task/deadline creation
+- Real-time sync with Google Calendar
+- Centralized dashboard for all deadlines
+- Cloud-based data persistence
 
-**Prerequisites:**  Node.js
+## Tech Stack
+- React + TypeScript (Vite)
+- Firebase Firestore
+- Google Calendar API
+- Google Gemini API
 
+## Live Demo
+https://deadlinezero-833626251261.asia-southeast1.run.app
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Setup
+[ADD: npm install / env vars needed / how to run locally]
